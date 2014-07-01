@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by JetBrains PhpStorm.
  * User: Saphir
@@ -8,14 +9,19 @@
  */
 class Pages extends CI_Controller
 {
-   public function view($id){
+    public function view($id)
+    {
 
-      $data['title']=$id;
-       $this->load->view('templates/header', $data);
-       $this->load->view('templates/topnav', $data);
-       $this->load->view('templates/view',$data);
+        if ($id != null) {
+            $data['title'] = $id;
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/topnav', $data);
+            $this->load->view('templates/view', $data);
 
-       $this->load->view('templates/footer',$data);
+            $this->load->view('templates/footer', $data);
+        }
 
-   }
+    }
+
+
 }

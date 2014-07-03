@@ -375,7 +375,6 @@ class CI_DB_forge {
 		$this->keys			= array();
 		$this->primary_keys	= array();
 	}
-
 }
 
 /* End of file DB_forge.php */

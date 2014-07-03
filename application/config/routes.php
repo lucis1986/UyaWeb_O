@@ -39,7 +39,6 @@
 */
 
 $route['default_controller'] = "welcome";
-$route['scaffolding_trigger']="scaffolding";
 $route['404_override'] = '';
 
 

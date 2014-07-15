@@ -1,8 +1,8 @@
 <html>
-<head><?php echo $title;?></head>
+<head></head>
 <body>
 
-test
+<?=$a ?>
 
 </body>
 </html>

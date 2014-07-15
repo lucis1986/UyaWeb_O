@@ -35,7 +35,7 @@ class NewsModel extends CI_Model {
     {
         $this->title   = $_POST['title'];
         $this->body = $_POST['body'];
-        $this->ModifyTime    = time();
+        $this->ModifyTime    =  date('y-m-d h:i:s',time());
         $this->db->update('news', $this, array('id' => $_POST['id']));
     }
 

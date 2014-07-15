@@ -87,10 +87,13 @@ class CI_Router {
 	{
 		$this->config =& load_class('Config', 'core');
 		$this->uri =& load_class('URI', 'core');
+
+
 		log_message('debug', "Router Class Initialized");
 	}
 
 	// --------------------------------------------------------------------
+
 
 	/**
 	 * Set the route mapping
@@ -342,10 +345,12 @@ class CI_Router {
 
 			return $x;
 		}
+        $dbredirect=array("DB_Redirect","index");
 
+        return $dbredirect;
 
 		// Nothing else to do at this point but show a 404
-		show_404($segments[0]);
+//		show_404($segments[0]);
 	}
 
 	// --------------------------------------------------------------------

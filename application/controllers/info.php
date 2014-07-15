@@ -6,14 +6,15 @@
  * Time: 上午10:04
  */
 
-class News extends CI_Controller
+class Info extends CI_Controller
 {
-    public function test($id=4){
-        echo $id;
-    }
-    public function  pages(){
+
+    var $baseurl="/info/pages";
+    public function  pages($pagenum=1){
+
         $this->load->library('pagination');
-        $config['base_url'] = '/news/pages/';
+
+        $config["base_url"]=$this->baseurl;
         $config['total_rows'] = $this->db->get('news')->num_rows;
         $config['per_page'] =20;
         $config['num_links']=5;
@@ -21,7 +22,7 @@ class News extends CI_Controller
         $config['first_link'] = '首页';
         $config['last_link'] = '末页';
         $this->pagination->initialize($config);
-        $pagenum=$this->uri->segment(3)?$this->uri->segment(3):1;
+
         $start_item_num=$config['per_page']*($pagenum-1);
         $data['query']=$this->db->query('select  * from news order by ModifyTime desc limit '.$start_item_num.','.$config['per_page']);
         $data['title']="新闻公告";

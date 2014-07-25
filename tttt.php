@@ -8,6 +8,6 @@
 
 class tttt {
 public function sss(){
-    echo "ssssss";
+    echo "sssssssss";
 }
 } 

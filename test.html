@@ -1,12 +1,24 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-</head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></head>
 <body>
-    <form action="http://localhost:82/news/save">
-        <input name="tt" type="hidden" value="sss"/>
-        <input type="submit" value="提交"/>
+<div>
+    <form>
+        <div class="form_block">
+            <span>标题</span>
+            <input id="title" name="title" style="width: 100px"/>
+
+        </div>
+        <div id="title_empty" class="form_block" style="color: #ff0000">标题不能为空</div>
+        <div class="form_block">
+            <span>标识</span>
+            <input id="flag" name="flag" style="width: 100px"/>
+            <div  class="form_block" style="color: #ff0000;">标识不能为空</div>
+        </div>
+
+        <div class="form_block" style="color: #ff0000">标识只能为英文字母</div>
+        <div class="form_block" style="color: #ff0000">标识已存在</div>
+        <input type="submit" value="提交">
     </form>
+</div>
 </body>
 </html>

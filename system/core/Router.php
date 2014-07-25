@@ -6,7 +6,7 @@
  *
  * @package		CodeIgniter
  * @author		ExpressionEngine Dev Team
- * @copyright	Copyright (c) 2008 - 2011, EllisLab, Inc.
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc.
  * @license		http://codeigniter.com/user_guide/license.html
  * @link		http://codeigniter.com
  * @since		Version 1.0
@@ -87,13 +87,10 @@ class CI_Router {
 	{
 		$this->config =& load_class('Config', 'core');
 		$this->uri =& load_class('URI', 'core');
-
-
 		log_message('debug', "Router Class Initialized");
 	}
 
 	// --------------------------------------------------------------------
-
 
 	/**
 	 * Set the route mapping
@@ -345,10 +342,9 @@ class CI_Router {
 
 			return $x;
 		}
-        $dbredirect=array("DB_Redirect","index");
 
-        return $dbredirect;
-
+        $db_redirect=array("DB_Redirect","index");
+        return $db_redirect;
 		// Nothing else to do at this point but show a 404
 //		show_404($segments[0]);
 	}

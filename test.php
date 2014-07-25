@@ -1,4 +1,6 @@
 <?php
+
+
 ///**
 // * Created by PhpStorm.
 // * User: Saphir
@@ -128,4 +130,4 @@ $a=&test();//这条语句会输出　$b的值　为3
 $a=5;
 $a=test();//这条语句会输出　$b的值　为6*/
 
-$a=&tt();
+echo date("H:i:s",time());

@@ -8,10 +8,21 @@ body {
     text-align: center;
 }
 
+ul{
+    list-style: none;
+}
 #topright_nav {
     float: right;
 }
-
+a{
+    text-decoration: none;
+}
+a:link{
+    color: inherit;
+}
+a:visited{
+    color: inherit;
+}
 #topright_nav li {
     float: left;
     list-style: none;
@@ -26,9 +37,7 @@ body {
     display: block;
     width: 30px;
     height: 50px;
-    background-image: url("../images/dot_space.png");
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url("../images/dot_space.png") no-repeat center;
 
 }
 
@@ -37,18 +46,13 @@ body {
     margin-top: 30px;
     width: 370px;
     height: 97px;
-    background-image: url("../images/logo.png");
-    background-repeat: no-repeat;
-    background-position: top center;
+    background:url("../images/logo.png") no-repeat top center ;
 }
 
 #main_menu {
     float: right;
     height: 177px;
-    background-image: url("../images/gear.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #DCDDDD;
+    background: #DCDDDD url("../images/gear.png") no-repeat center;
     overflow: hidden;
 }
 
@@ -126,17 +130,7 @@ body {
 
 }
 
-.title {
-    position: absolute;
-    margin-bottom: 0px;
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    font-size: 14pt;
-    left: 10px;
-    top: 15px;
 
-}
 
 .issued_date {
     position: absolute;
